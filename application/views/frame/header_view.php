@@ -8,8 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Organization Name</title>
+    <title><?=$title?> - EMAIL SENDER SYSTEM V1.0</title>
 
+    
     <!-- Bootstrap Core CSS -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
 
@@ -28,7 +29,7 @@
     <link href="<?=base_url()?>assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom tab icons -->
-    <link rel="shortcut icon" href="<?=base_url()?>assets/images/codeigniter_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/281/281769.png" type="image/x-icon">
     <link href="<?=base_url()?>assets/js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="<?=base_url()?>assets/js/jquery-ui-1.11.4.custom/jquery-ui-custom-datepicker.css" rel="stylesheet" type="text/css" />
     
@@ -51,7 +52,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?=base_url();?>">
-                    <div class="inline"> &nbsp;Organization Name </div>
+                    <div class="inline"> &nbsp;EMAIL MANAGEMENT </div>
                 </a>
 
             </div>

@@ -43,7 +43,7 @@ class Authentication_model extends CI_Model {
     }
 
     function validate_reg($postData){
-         $validate = $this->validate_email($postData);
+        $validate = $this->validate_email($postData);
 
         if($validate){
             $data = array(

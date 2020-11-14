@@ -26,5 +26,7 @@
 
 
 </body>
+<!-- Footer -->
 
+<!-- Footer -->
 </html>
