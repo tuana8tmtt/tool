@@ -260,7 +260,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from POST data with fallback to GET
-	 *
+	 *emails
 	 * @param	string	$index		Index for item to be fetched from $_POST or $_GET
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
 	 * @return	mixed

@@ -17,10 +17,10 @@
                             </li>
                         <?php endif; ?>
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> Other Menu Sample<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> Menu feature<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li> <a href="#">&raquo; Other Sub Menu 1</a> </li>
-                                <li> <a href="#">&raquo; Other Sub Menu 2</a> </li>
+                                <li> <a href="<?=base_url()?>/dashboard/insert">&raquo; Insert your account</a> </li>
+                                <li> <a href="<?=base_url()?>/dashboard/schedule">&raquo; Send email</a> </li>
                             </ul>
                         </li>
                   

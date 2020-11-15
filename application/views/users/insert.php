@@ -60,7 +60,7 @@
                 <div class="col-sm-12">
                 <div class="col-sm-8">
 
-                <form method="post" Action="<?=base_url()?>/dashboard/insert_db_gmail">
+                <!-- <form method="post" Action="<?=base_url()?>/dashboard/insert_db_gmail"> -->
                     
                 <div class="form-group ">
                     
@@ -85,9 +85,9 @@
                     <label for="passEmailUsr">Password</label>
                     <input type="password" name="passEmailUsr" class="form-control" id="passEmailUsr" placeholder="Password">
                 </div>
-                <button type="submit" id="insert_button" class="btn btn-primary" disabled>SAVE</button>
+                <button onclick="sendEmail()" type="submit" id="insert_button" class="btn btn-primary" disabled>SAVE</button>
                 <?php echo $this->session->flashdata('mess'); ?>
-                </form>
+                <!-- </form> -->
                 </div>
 
                 </div>
@@ -131,7 +131,7 @@
                                     }else {
                                     echo '<td><span style="color:red"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/209/cross-mark_274c.png" width="20px" height="20px" alt=""></span></td>';
                                     }
-                                    echo '<td><a class="btn btn-primary" id="user-edit"  onclick="" data-toggle="modal" data-target="#editUser">CHECK</a>';
+                                    echo '<td><button   class="btn btn-primary" id="user-edit-'.$row->emailUsr.'"   onclick="checkPass(\''.$row->emailUsr.'\')">CHECK</button>';
                                     echo '<a class="btn btn-danger" id="user-delete" onclick="" data-toggle="modal" data-target="#deactivateConfirm"> DELETE </a>';
                                     echo "<td>";
                                     echo "</tr>";
@@ -156,6 +156,49 @@
 
 
     });
+    $('#passEmailUsr').keypress(function (e) {
+        document.getElementById("insert_button").disabled = false;
+
+    });
+
+    // load form submit
+    function sendEmail() {
+        document.getElementById("insert_button").innerHTML = "WAITING...";
+
+        document.getElementById("insert_button").disabled = true;
+
+        let user = document.getElementById("emailUsr").value;
+        let pass = document.getElementById("passEmailUsr").value;
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                location.reload()
+
+            }
+        };
+        xhttp.open("POST", "<?=base_url()?>/dashboard/insert_db_gmail", true);
+        
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("emailUsr="+user+"&passEmailUsr="+pass);
+    }
+    function checkPass(email){
+
+        document.getElementById("user-edit-"+email).innerHTML = "WAITING...";
+
+        document.getElementById("user-edit-"+email).disabled = true;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                alert("Check thành công");
+                location.reload()
+            }
+        };
+        xhttp.open("POST", "<?=base_url()?>/dashboard/check_gmail", true);
+        
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("emailUsr="+email);
+    }
 </script>
 
 

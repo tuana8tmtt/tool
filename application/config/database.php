@@ -92,5 +92,6 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
+	'autoinit' => TRUE,
 	'save_queries' => TRUE
 );
