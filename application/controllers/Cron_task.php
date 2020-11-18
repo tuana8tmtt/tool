@@ -8,15 +8,7 @@ if (!defined('BASEPATH')) {
 
 class Cron_task extends CI_Controller {
 
-    public function __Construct() {
-        parent::__Construct();
-        if(!$this->session->userdata('logged_in')) {
-            redirect(base_url());
-        }
-        
-        $this->load->database();
-
-    }
+   
     public function index(){
         $this->load->model('email/Send');
         $this->load->model('schedule/PassMail_fetch');

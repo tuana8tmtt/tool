@@ -24,8 +24,9 @@ class Dashboard extends CI_Controller {
     }
 
     public function index() {
-        $this->loadHead('Dashboard');
-        $this->load->view('dashboard');
+        // $this->loadHead('Dashboard');
+        // $this->load->view('dashboard');
+        redirect('http://localhost/show_schedule');
     }
     public function Schedule() {
         $this->load->model('users/Gmail_fetch');//load module nha
