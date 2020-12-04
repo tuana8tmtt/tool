@@ -21,7 +21,7 @@
                 <div class="col-lg-12">
                 
                     <div class="col-lg-6">
-                    <h3 class="page-header"><center>Schedule Insert</center></h3>
+                    <h3 class="page-header"><center><button type="button" class="btn btn-primary">Schedule Insert</button></center></h3>
 
                     <div class="col-lg-6">
                 <form autocomplete="off" method="POST" action="<?=base_url()?>dashboard/insert_schedule">
@@ -80,7 +80,7 @@
 
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
-                    <h3 class="page-header"><center>Preview</center></h3>
+                    <h3 class="page-header"><center><button type="button" class="btn btn-primary">Preview</button></center></h3>
                     <div class="panel panel-info  ">
                     <div class="panel-heading">EMAIL CONTENT</div>
 

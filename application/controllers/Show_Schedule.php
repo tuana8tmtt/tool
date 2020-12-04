@@ -32,6 +32,7 @@ class Show_Schedule extends CI_Controller {
         $tag['name'.$tag['data'][$x]->tag] = $this->Schedule_fetch->display_schedule($tag['data'][$x]->tag)[0]->name;
         $tag['content'.$tag['data'][$x]->tag] = $this->Schedule_fetch->display_schedule($tag['data'][$x]->tag)[0]->content;
         $tag['time'.$tag['data'][$x]->tag] = $this->Schedule_fetch->display_schedule($tag['data'][$x]->tag)[0]->time;
+        $tag['emailSend'.$tag['data'][$x]->tag] = $this->Schedule_fetch->display_schedule($tag['data'][$x]->tag)[0]->emailSend;
 
 
         }
