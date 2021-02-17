@@ -79,8 +79,8 @@ CREATE TABLE `emailuser` (
 --
 
 INSERT INTO `emailuser` (`id`, `emailUsr`, `passEmailUsr`, `who`, `checked`, `time`) VALUES
-(2, 'testauto651@gmail.com', 'Tuan2102', 16, 1, ''),
-(3, 'fpttestii@gmail.com', 'Tuan2102', 16, 1, '1605528433');
+(2, 'testauto651@gmail.com', 'Tuan210', 16, 1, ''),
+(3, 'fpttestii@gmail.com', 'Tuan212', 16, 1, '1605528433');
 
 -- --------------------------------------------------------
 
