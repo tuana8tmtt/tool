@@ -6,6 +6,7 @@ if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
+
 class Cron_task extends CI_Controller {
 
    
